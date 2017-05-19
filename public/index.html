@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>todoapp</title>
+	 <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+	<!-- <link rel="stylesheet" href="css/updated.css"> -->
+	<link rel="stylesheet" href="css/index.css">
+
+	<!-- <script src="js/dashboard.js" type="text/javascript"></script> -->
+</head>
+
+
+<body id="body">
+	<header>
+		<nav class="navbar-inverse">
+			<nav class="navbar navbar-inverse" style="background-color:rgb(232, 134, 0);">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#home">My Keep</a>
+					</div>
+					<ul class="nav navbar-nav"></ul>
+				</div>
+				</div>
+			</nav>
+		</nav>
+	</header>
+		<!-- home page -->
+		<div id="page-container"></div>
+		<div id="btn-blu">
+			<script id="home-page-template" type="text/x-handlebars-template">
+				<div id="home-page" class="page active">
+					<!-- <p>
+						This is HOME page
+					</p> -->
+				</div>
+			</script>
+
+		<div class="login-page">
+		  <div class="form">
+		    <form class="register-form">
+		      <input type="text" id="userName" placeholder="User Name"/>
+					<input type="Number" id="mobileNo" placeholder="Mobile No"/>
+					<input type="text" id="email" placeholder="Email"/>
+		      <input type="password" id="password" placeholder="Password"/>
+		      <!-- <input type="text" placeholder="email address"/> -->
+		      <button id="signinBtn">Register</button>
+		      <p class="message">Already registered? <a href="#login">Sign In</a></p>
+		    </form>
+		    <form class="login-form">
+		      <input type="text" id="exampleInputEmaillog" placeholder="Email"/>
+		      <input type="password" id="loginPassword" placeholder="Password"/>
+		      <button id="fetchUser">Login</button>
+		      <p class="message">Not registered? <a href="#signup">Create an account</a></p>
+		    </form>
+		  </div>
+		</div>
+	</div>
+	<script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+	<script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="bower_components/handlebars/handlebars.min.js" type="text/javascript"></script>
+	<script src="bower_components/packery/dist/packery.pkgd.min.js" type="text/javascript"></script>
+	<script src="bower_components/draggabilly/dist/draggabilly.pkgd.min.js" type="text/javascript"></script>
+	<script src="js/app.js" type="text/javascript"></script>
+	<script src="js/todo.js"></script>
+	<script src="js/dashboard1.js" type="text/javascript"></script>
+
+			<!-- </div>
+			</div>
+		</script> -->
+</body>
+
+<script>
+/*change signin  to signup and vice-versa*/
+$('.message a').click(function(){
+   $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
+});
+</script>
+</html>

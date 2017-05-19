@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <h1 itemprop="name" style="display:none;">Bootply</h1>
+  <meta itemprop="about" content="Bootstrap Editor, Snippets and Playground">
+  <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a href="http://bootply.com/" class="brand" title="Bootstrap editor, templates and snippets.">
+                    Bootply
+                </a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav nav-pills hidden-phone hidden-tablet">
+
+                        <li><a id="btnRun" title="Preview the result of your Javascript, HTML and CSS code" href="#">Run</a></li>
+
+
+                        <li><a id="btnFork" data-loading-text="Wait.." title="Fork this into a new Bootply" href="#">Fork</a></li>
+
+                        <li><a id="btnDrop" title="Toggle the Drag-and-Drop editor" href="#" rel="nofollow">Visual <i class="icon-eye-open"></i></a></li>
+                        <li><a id="btnSwitch" data-toggle="button" style="display:none;" href="#" rel="nofollow">Preview</a></li>
+
+                        <li class="fb-like hidden-phone hidden-tablet fb_iframe_widget" data-href="http://bootply.com" data-send="false" data-layout="button_count" data-width="80" data-show-faces="false" data-font="arial" fb-xfbml-state="rendered" fb-iframe-plugin-query="app_id=482723745132387&amp;container_width=0&amp;font=arial&amp;href=http%3A%2F%2Fbootply.com%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=80"><span style="vertical-align: bottom; width: 77px; height: 20px;"><iframe name="f15c19e74b7931c" width="80px" height="1000px" frameborder="0" allowtransparency="true" allowfullscreen="true" scrolling="no" title="fb:like Facebook Social Plugin" src="https://www.facebook.com/v2.7/plugins/like.php?app_id=482723745132387&amp;channel=http%3A%2F%2Fstaticxx.facebook.com%2Fconnect%2Fxd_arbiter%2Fr%2F96nq-xsaNcg.js%3Fversion%3D42%23cb%3Df10abceb5925228%26domain%3Dwww.bootply.com%26origin%3Dhttp%253A%252F%252Fwww.bootply.com%252Ff397792247d32f4%26relation%3Dparent.parent&amp;container_width=0&amp;font=arial&amp;href=http%3A%2F%2Fbootply.com%2F&amp;layout=button_count&amp;locale=en_US&amp;sdk=joey&amp;send=false&amp;show_faces=false&amp;width=80" style="border: none; visibility: visible; width: 77px; height: 20px;" class=""></iframe></span></li>
+                        <li class="hidden-phone">
+                            <script src="//m.servedby-buysellads.com/monetization.js" type="text/javascript"></script>
+                            <div class="bsa-cpc"></div>
+                            <script>
+                            (function(){
+                              _bsa.init('default', 'CVADC53Y', 'placement:bootplycom', {
+                                target: '.bsa-cpc',
+                                align: 'horizontal',
+                                disable_css: 'true'
+                              });
+                            })();
+                            </script>
+                        </li>
+                    </ul>
+                    <ul class="nav nav-pills pull-right">
+                        <li><form class="input-append hidden-tablet" method="GET" action="/search" style="margin-top:4px;margin-bottom:5px;"><input type="text" title="Enter keyword(s) to find" id="kw" name="kw" class="span2" maxlength="40"><button type="submit" class="btn"><i class="icon-search" title="Search"></i></button></form>&nbsp;&nbsp;</li>
+                        <li class="dropdown" id="menuLogin">
+                            <a class="dropdown-toggle" href="#" data-toggle="dropdown" id="navLogin">Login</a>
+                            <div class="dropdown-menu" style="padding:17px;">
+                                <form id="formLogin" class="form">
+                                    <label>Login</label>
+                                    <input name="_csrf" id="token" type="hidden" value="QBSQCmtj-XYNmJgxCNzY0edxtl-0RqiKqjLY">
+    							    <input name="username" id="username" type="text" placeholder="Username" pattern="^[a-z,A-Z,0-9,_]{6,15}$" data-valid-min="6" title="Enter your username" required="">
+    							    <input name="password" id="password" type="password" placeholder="Password" title="Enter your password" required=""><br>
+    							    <button type="button" id="btnLogin" class="btn">Login</button>
+    							</form>
+                                <form><a href="#" title="Fast and free sign up!" id="btnNewUser" data-toggle="collapse" data-target="#formRegister">New User? Sign-up..</a></form>
+                                <form id="formRegister" class="form collapse">
+                                    <input name="_csrf" id="token" type="hidden" value="QBSQCmtj-XYNmJgxCNzY0edxtl-0RqiKqjLY">
+                                    <input name="email" id="inputEmail" type="email" placeholder="Email" required="">
+        						    <input name="username" id="inputUsername" type="text" placeholder="Username" pattern="^[a-z,A-Z,0-9,_]{6,15}$" data-valid-min="6" title="Choose a username" required=""><br>
+    							    <input name="password" id="inputpassword" type="password" placeholder="Password" required="">
+                                    <input name="verify" id="inputVerify" type="password" placeholder="Password (again)" required=""><br>
+    							    <button type="button" id="btnRegister" class="btn">Sign Up</button>
+    							</form>
+                                <a data-toggle="modal" role="button" href="#forgotPasswordModal">Forgot username or password?</a>
+                                <a data-toggle="modal" role="button" href="#contactModal"><small>Need help? Contact us</small></a>
+                            </div>
+                        </li>
+                        <li class="dropdown hide" id="menuUser">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" title="See your Bootply collection and profile">
+                                <i class="icon-user icon-xxlarge"> </i> <span id="lblUsername"></span>
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/user">Dashboard</a></li>
+                                <li><a href="/new">Create New Bootply</a></li>
+
+                                <li><a href="/logout">Logout</a></li>
+                                <li class="divider"> </li>
+                                <li><a href="/bootstrap-community">Community</a></li>
+                                <li><a href="/about">About</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </div>
+      </body>
+        </html>

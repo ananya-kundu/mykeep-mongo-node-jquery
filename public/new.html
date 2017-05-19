@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>mykeep</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href='https://fonts.googleapis.com/css?family=Product+Sans:400,400i,700,700i' rel='stylesheet' type='text/css'> -->
+
+  <!-- <script src="js/dashboard.js" type="text/javascript"></script> -->
+
+  <!-- <script src="js/dashboard.js" type="text/javascript"></script> -->
+  <!-- <script src="js/fetchUser.js" type="text/javascript"></script> -->
+  <!-- <script src="js/todo.js"></script> -->
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+  <!-- <nav role="navigation" class="navbar navbar-default">
+
+        <div class="navbar-header">
+            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">Brand</a>
+        </div>
+
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Messages</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </nav> -->
+
+
+  <nav class="navbar navbar-default navbar-inverse" id="navbarColor" role="navigation">
+
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toogle="collapse" data-target="#mynavbar">
+          <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> -->
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+      </button>
+        <!-- <a class="navbar-brand" href="#menu-toggle" id="menu-toggle">
+            <span class="glyphicon glyphicon-list" id="glyList" aria-hidden="true"></span> -->
+        <a class="navbar-brand" href="#menu-toggle" id="menu-toggle">
+          <span class="glyphicon glyphicon-list" id="glyList" aria-hidden="true"></span></a>
+        <span> <span id="keepClass">
+               <!-- <span></span> --> My Keep
+        </span>
+        </span>
+        </a>
+      </div>
+
+
+      <ul class="nav navbar-nav navbar-right">
+        <form class="navbar-form navbar-left">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search" style="background-color:rgba(255,255,255,.8);">
+            <div class="input-group-btn">
+              <button class="btn btn-default btn-block" type="submit" style="background-color:rgba(255, 255,255, .8);">
+                <i class="glyphicon glyphicon-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+        <li>
+          <p class="navbar-text" id="textColor">
+            <b><span class="glyphicon glyphicon-refresh"></span></b></p>
+        </li>
+        <li>
+          <p class="navbar-text" id="textColor">
+            <!-- <a href="#"><span id="listview" class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span> </a> -->
+            <span class="list-style-buttons">
+    <a id="gridview">grid</a>
+    <a  id="listview" >list</a>
+</span>
+
+            <li class="dropdown" style="background-color:#fb0;">
+                      <a href="#" class="dropdown-toggle"  data-toggle="dropdown" style="background-color:#fb0;color:black;">
+                        <b><span class="glyphicon glyphicon-user" ></b>
+                          <span class="caret"></span></a>
+            			<ul id="login-dp" class="dropdown-menu">
+            				<li>
+            					 <div class="row">
+            							<div class="col-md-12">
+
+            								<div class="social-buttons">
+            									<a href="#" class="btn btn-fb"><span class="glyphicon glyphicon-user">MyAccount</span></a>
+            									<a href="#" class="btn btn-tw" id="logOutId"><span class="glyphicon glyphicon-off">SignOut</span></a>
+            								</div>
+
+            							</div>
+            					 </div>
+            				</li>
+            			</ul>
+                    </li>
+                  </ul>
+
+
+      </ul>
+    </div>
+  </li>
+  </nav>
+
+  <div id="wrapper" class="toggled">
+    <div class="container-fluid">
+      <!-- Sidebar -->
+      <div id="sidebar-wrapper" style="margin-top:-19px">
+        <ul class="sidebar-nav">
+          <li class="sidebar-brand">
+            <br>
+          </li>
+          <li class="sidebar-brand">
+            <a href="#" class="navbar-brand">
+              <span class="glyphicon glyphicon-user" aria-hidden="true"></span> Profile
+            </a>
+          </li>
+          <li>
+            <a href="#"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> Home</a>
+          </li>
+          <li>
+            <a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> Search</a>
+          </li>
+          <li>
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            <font color="#337AB7"> STATISTICS</font>
+          </li>
+          <li>
+            <a href="#"><span class="glyphicon glyphicon-tasks" aria-hidden="true"></span> Reports</a>
+          </li>
+          <li>
+            <a href="#"><span class="glyphicon glyphicon-stats" aria-hidden="true"></span> Statistic</a>
+          </li>
+          <li>
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+            <font color="#337AB7"> ADMINISTRATION</font>
+          </li>
+          <li>
+            <a href="#"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Users</a>
+          </li>
+          <li>
+            <a href="#"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span> Messages</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /#sidebar-wrapper -->
+
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title"><div id="popupTitle" contenteditable="true" placeholder="Title"></div></h4>
+            </div>
+            <div class="modal-body"><div id="popupContent" contenteditable="true" placeholder="Take a note.."></div>
+              <!-- <p>Content...</p> -->
+            </div>
+            <div class="modal-footer">
+              <button type="button" id="close" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="page-content-wrapper">
+        <!-- <div class="container" style = "border:1px solid black"> -->
+
+
+        <div class="row" id="msgDivId">
+          <div class="col-md-3"></div>
+          <div class="col-lg-12">
+
+            <div class="col-md-6" style="margin-left:20%">
+              <div id="mainMsgBox">
+                <div id="title">
+
+                  <input type="text" id="dummyTitle" placeholder="Take a note.." size="50"></input>
+                </div>
+                <div id="userMsgBox" class="toggled">
+                  <!-- <div class="todotittle" id="btext" >Title..  </div> -->
+                               <!-- <div  id="taketitle" contenteditable="true" spellcheck="true" >  </div> -->
+                  <div id="title1" contenteditable="true" style="border:none;" class="userGivenTitle" placeholder="Title" size="50" style="outline:none;height:45px;font-size:20px;"></div>
+                   <!-- <div class="todocontent" id="bcontent">Take a Note..</div> -->
+                  <div id="content" contenteditable="true" style="border:none;" class="userGivenNote" placeholder="Take a Note.." size="50" style="outline:none;height:45px;border:none;"></div>
+
+                  <p id="writeMsg">
+                    <i style="margin-left:16px" class="fa fa-hand-pointer-o fa-lg" aria-hidden="true" style="font-size:24px"></i>
+                    <i style="margin-left:16px" class="fa fa-user-plus" style="font-size:36px" aria-hidden="true"> </i>
+                    <i style="margin-left:16px" class="fa fa-paint-brush fa-lg" style="font-size:24px" aria-hidden="true"></i>
+                    <i style="margin-left:16px" class="fa fa-picture-o fa-lg" aria-hidden="true"></i>
+                    <i style="margin-left:16px" class="fa fa-ellipsis-v" aria-hidden="true"></i>
+
+                    <button type="button" id="done" >DONE</button>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+              <!-- </div> -->
+        <div class="row" id="notes">
+
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- /#page-content-wrapper -->
+  </div>
+  </div>
+
+
+
+  <!-- /#wrapper -->
+</body>
+
+<script>
+  $('#mynavbar').click('li', function() {
+    $('#mynavbar').collapse('hide');
+  });
+
+  //this is for sidebar
+  $("#menu-toggle").click(function(e) {
+    e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+    // $("#userMsgBox").toggleClass("toggled");
+  });
+  // <Msg box>
+  $("#userMsgBox").hide();
+  $("#mainMsgBox").click(function() {
+    $("#dummyTitle").hide();
+    $("#userMsgBox").show();
+  });
+  $("#wrapper").click(function() {
+    $("#glyList").css("margin-left", "0px");
+    // $("#userMsgBox").show();
+  });
+</script>
+
+</html>
+
+
+
+
+<!-- //
+  //// for creating multiple note
+  // $("#done").click(function () {
+  //   var node = document.getElementById('note');
+  //   console.log(node);
+  //   var temp = document.createElement("div");
+  //   temp.setAttribute("id","newtemp");
+  //   temp.setAttribute("class","col-sm-4");
+  //   var temp1 = document.createElement("pre");
+  //   temp1.setAttribute("id","newtemp1");
+  //   temp.append(temp1);
+  //   node.append(temp);
+  //
+  //     }); -->
